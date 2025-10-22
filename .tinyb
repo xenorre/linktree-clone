@@ -1,0 +1,14 @@
+{
+    "host": "https://api.europe-west2.gcp.tinybird.co",
+    "id": "4e1b8024-e4d9-4057-866c-54f8ed334b9b",
+    "name": "xenore",
+    "scope": "user",
+    "token": "p.eyJ1IjogIjRlMWI4MDI0LWU0ZDktNDA1Ny04NjZjLTU0ZjhlZDMzNGI5YiIsICJpZCI6ICIwNzM3MTlhNy1iZDg2LTRmYWYtYTFlOC1lYTI1YTdjMmFhYzYiLCAiaG9zdCI6ICJnY3AtZXVyb3BlLXdlc3QyIn0.PmpfoZHKBvZn7Vj4M7IVgV_-NOt1rYlRHd5WaltEudo",
+    "tokens": {
+        "https://api.europe-west2.gcp.tinybird.co": "p.eyJ1IjogIjRlMWI4MDI0LWU0ZDktNDA1Ny04NjZjLTU0ZjhlZDMzNGI5YiIsICJpZCI6ICIwNzM3MTlhNy1iZDg2LTRmYWYtYTFlOC1lYTI1YTdjMmFhYzYiLCAiaG9zdCI6ICJnY3AtZXVyb3BlLXdlc3QyIn0.PmpfoZHKBvZn7Vj4M7IVgV_-NOt1rYlRHd5WaltEudo"
+    },
+    "user_email": "zalewskidawid97@gmail.com",
+    "user_id": "6579bc10-f724-4ed8-98d3-0aeafe3d4881",
+    "user_token": "p.eyJ1IjogIjY1NzliYzEwLWY3MjQtNGVkOC05OGQzLTBhZWFmZTNkNDg4MSIsICJpZCI6ICJmYjI0MDNlYi00MDU2LTQ4NmItYWI4YS05Yzk5YzIzMmE4NzkiLCAiaG9zdCI6ICJnY3AtZXVyb3BlLXdlc3QyIn0.i4rw0_WhCndlTuxKeXxXFcZWtISjWE2Kg-Fzi7KwhNQ",
+    "version": "0.0.1.dev307"
+}
