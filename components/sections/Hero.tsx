@@ -27,7 +27,7 @@ function Hero() {
             <Button
               asChild
               size="lg"
-              className="text-lg px-4 py-6 h-auto bg-linear-to-r from-emerald-400 via-emerald-500 to-emerald-600 hover:from-emerald-500 hover:via-emerald-600 hover:to-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 transition-all duration-300"
+              className="text-lg px-8 py-4 h-auto rounded-full bg-linear-to-r from-emerald-400 via-emerald-500 to-emerald-600 hover:from-emerald-500 hover:via-emerald-600 hover:to-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 transition-all duration-300"
             >
               <Link href="/dashboard" className="flex items-center gap-2">
                 Start Linking for Free
@@ -39,7 +39,7 @@ function Hero() {
               asChild
               variant="outline"
               size="lg"
-              className="text-lg px-6 py-6 h-auto border-gray-300 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 transition-all duration-300"
+              className="text-lg px-8 py-4 h-auto rounded-full border-gray-300 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 transition-all duration-300"
             >
               <Link href="#features" className="flex items-center gap-2">
                 See How It Works
