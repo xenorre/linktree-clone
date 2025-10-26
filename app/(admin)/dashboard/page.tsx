@@ -1,4 +1,5 @@
 import UsernameForm from "@/app/components/UsernameForm";
+import CustomizationForm from "@/components/CustomizationForm";
 import { currentUser } from "@clerk/nextjs/server";
 
 async function Dashboard() {
@@ -17,6 +18,11 @@ async function Dashboard() {
       </div>
 
       {/* Page Customization Section */}
+      <div className="bg-linear-to-br from-gray-50 to-gray-100 p-4 lg:p-8 mb-8">
+        <div className="max-w-7xl mx-auto">
+          <CustomizationForm />
+        </div>
+      </div>
 
       {/* Link Management Section */}
     </div>
