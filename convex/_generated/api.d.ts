@@ -8,6 +8,7 @@
  * @module
  */
 
+import type * as lib_usernames from "../lib/usernames.js";
 import type * as myFunctions from "../myFunctions.js";
 
 import type {
@@ -25,6 +26,7 @@ import type {
  * ```
  */
 declare const fullApi: ApiFromModules<{
+  "lib/usernames": typeof lib_usernames;
   myFunctions: typeof myFunctions;
 }>;
 declare const fullApiWithMounts: typeof fullApi;
