@@ -22,7 +22,7 @@ function PublicPageContent({
   username,
 }: PublicPageContentProps) {
   const customizations = usePreloadedQuery(preloadedCustomizations);
-  const accentColor = customizations?.accentColor || "#6366f1";
+  const accentColor = customizations?.accentColor || "#009966"; // Default to indigo-500
 
   return (
     <div className="min-h-screen bg-gray-50">
