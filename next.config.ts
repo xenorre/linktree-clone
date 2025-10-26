@@ -6,8 +6,10 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "images.pexels.com",
-        port: "",
-        pathname: "/photos/**",
+      },
+      {
+        protocol: "https",
+        hostname: "superb-porpoise-48.convex.cloud",
       },
     ],
   },
