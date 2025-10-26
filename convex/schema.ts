@@ -13,9 +13,19 @@ export default defineSchema({
     .index("by_user_id", ["userId"])
     .index("by_username", ["username"]),
 
+  links: defineTable({
+    userId: v.string(),
+    title: v.string(),
+    url: v.string(),
+    order: v.number(),
+  })
+    .index("by_user", ["userId"])
+    .index("by_user_and_order", ["userId", "order"]),
+
   userCustomizations: defineTable({
     userId: v.string(),
     profilePictureStorageId: v.optional(v.id("_storage")),
+    profilePictureUrl: v.optional(v.string()),
     description: v.optional(v.string()),
     accentColor: v.optional(v.string()),
   }).index("by_user_id", ["userId"]),
