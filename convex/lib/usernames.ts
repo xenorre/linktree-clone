@@ -93,3 +93,27 @@ export const setUsername = mutation({
     return { success: true };
   },
 });
+
+export const getUserIdBySlug = query({
+  args: {
+    slug: v.string(),
+  },
+  returns: v.union(v.string(), v.null()),
+  handler: async ({ db }, args) => {
+    const usernameRecord = await db
+      .query("usernames")
+      .withIndex("by_username", (q) => q.eq("username", args.slug))
+      .unique();
+
+    if (usernameRecord) {
+      return usernameRecord.userId;
+    }
+
+    const links = await db
+      .query("links")
+      .withIndex("by_user", (q) => q.eq("userId", args.slug))
+      .first();
+
+    return links ? args.slug : null;
+  },
+});
