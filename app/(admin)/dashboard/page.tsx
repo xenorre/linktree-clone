@@ -1,18 +1,63 @@
-import ManageLinks from "@/app/components/ManageLinks";
-import UsernameForm from "@/app/components/UsernameForm";
+import DashboardMetrics from "@/components/DashboardMetrics";
+import ManageLinks from "@/components/ManageLinks";
+import UsernameForm from "@/components/UsernameForm";
 import CustomizationForm from "@/components/CustomizationForm";
 import { api } from "@/convex/_generated/api";
+import { fetchAnalytics } from "@/lib/analytics-server";
+import { Protect } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
 import { preloadQuery } from "convex/nextjs";
+import { Lock } from "lucide-react";
 
 async function Dashboard() {
   const user = await currentUser();
+
   const preloadedLinks = await preloadQuery(api.lib.links.getLinksByUserId, {
     userId: user?.id || "",
   });
+
+  const analytics = await fetchAnalytics(user!.id);
+
+  console.log("Fetched analytics data:", analytics);
+
   return (
     <div>
       {/* Analytics Metrics - Premium Feature */}
+      <Protect
+        feature="pro_analytics"
+        fallback={
+          <div className="bg-linear-to-br from-gray-50 to-gray-100 p-4 lg:p-8 mb-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="bg-white/80 backdrop-blur-sm border-2 border-dashed border-gray-300 rounded-2xl p-8 shadow-xl shadow-gray-200/50">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="p-3 bg-gray-400 rounded-xl">
+                    <Lock className="size-6 text-white" />
+                  </div>
+                  <div>
+                    <h2 className="text-2xl font-bold text-gray-900">
+                      Analytics Overview
+                    </h2>
+                    <p className="text-gray-600">
+                      🔓 Upgrade to Pro/Star Plan to unlock detailed analytics
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-4 flex items-center">
+                  <div className="bg-gray-100 rounded-lg p-4 text-center w-full">
+                    <p className="text-gray-500">
+                      Get detailed insights into your profile visits and link
+                      clicks by upgrading to our Pro or Star plan.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      >
+        <DashboardMetrics analytics={analytics} />
+      </Protect>
 
       {/* Customize linktree url form */}
       <div

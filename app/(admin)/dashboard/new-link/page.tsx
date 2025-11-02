@@ -1,4 +1,4 @@
-import CreateLinkForm from "@/app/components/CreateLinkForm";
+import CreateLinkForm from "@/components/CreateLinkForm";
 import { api } from "@/convex/_generated/api";
 import { auth } from "@clerk/nextjs/server";
 import { fetchQuery } from "convex/nextjs";
