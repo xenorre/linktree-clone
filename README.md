@@ -2,6 +2,7 @@
   <i>Disclaimer: This project is a personal portfolio project inspired by Linktree. It is not affiliated with or endorsed by Linktree</i>
   <h1>🔗 Linker</h1>
   <p><strong>One Link, Every Connection</strong></p>
+  <a href="https://linktree-clone-ashy.vercel.app/"><strong>Live Preview</strong></a>
   <p>A modern Linktree clone built with Next.js 15, Convex, and real-time analytics</p>
 
   <p>
